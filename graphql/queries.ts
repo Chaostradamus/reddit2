@@ -21,7 +21,7 @@ query MyQuery {
       created_at
       id
       topic
-    
+    }
     votes {
       created_at
       id
@@ -30,7 +30,6 @@ query MyQuery {
       username
     }
   }
-}
 }
 `
 

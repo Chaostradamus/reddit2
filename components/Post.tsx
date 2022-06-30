@@ -39,11 +39,39 @@ function Post({ post }: Props) {
         </div>
         {/* body */}
         <div className="py-4">
-          <h2 className='text-xl font-semibold'>{post.title}</h2>
-          <p className='mt-2 text-sm font-light'>{post.body}</p>
+          <h2 className="text-xl font-semibold">{post.title}</h2>
+          <p className="mt-2 text-sm font-light">{post.body}</p>
         </div>
+
         {/* image */}
+        <img className="w-full" src={post.image} alt="" />
+
         {/* footer */}
+        <div className="flex space-x-4 text-gray-400">
+          <div className="postButtons">
+            <ChatAltIcon className="h-6 w-6" />
+            <p className="">{post.comments.length} Comments</p>
+          </div>
+
+          <div className="postButtons">
+            <GiftIcon className="h-6 w-6" />
+            <p className="hidden sm:inline">{post.comments.length} Award</p>
+          </div>
+          <div className="postButtons">
+            <ShareIcon className="h-6 w-6" />
+            <p className="hidden sm:inline">{post.comments.length} Share</p>
+          </div>
+
+          <div className="postButtons">
+            <BookmarkIcon className="h-6 w-6" />
+            <p className="hidden sm:inline">{post.comments.length} Save</p>
+          </div>
+
+          <div className="postButtons">
+            <DotsHorizontalIcon className="h-6 w-6" />
+            {/* <p className="hidden sm:inline">{post.comments.length} Comments</p> */}
+          </div>
+        </div>
       </div>
     </div>
   );

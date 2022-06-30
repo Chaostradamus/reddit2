@@ -27,10 +27,9 @@ type Post {
   subreddit: [Subreddit]
     @materializer(
       query: "getSubredditListById"
-      arguments: [{ name: "Id", field: "subreddit_id" }]
+      arguments: [{ name: "id", field: "subreddit_id" }]
     )
 }
-
 
 type Subreddit {
   created_at: DateTime
@@ -124,14 +123,17 @@ type Query {
   getPostList: [Post]
     @dbquery(
       type: "postgresql"
-      # schema: "public"
-      table: "post"
+      schema: "public"
+      query: """
+      select * from "post"
+      order by "post"."created_at" desc
+      """
       configuration: "postgresql_config"
     )
   getSubredditList: [Subreddit]
     @dbquery(
       type: "postgresql"
-      # schema: "public"
+      schema: "public"
       table: "subreddit"
       configuration: "postgresql_config"
     )
@@ -139,7 +141,7 @@ type Query {
   getSubredditListByTopic(topic: String!): [Subreddit]
     @dbquery(
       type: "postgresql"
-      # schema: "public"
+      schema: "public"
       query: """
       select * from "subreddit" where "topic" = $1
       """
@@ -149,7 +151,7 @@ type Query {
   getVoteList: [Vote]
     @dbquery(
       type: "postgresql"
-      # schema: "public"
+      schema: "public"
       table: "vote"
       configuration: "postgresql_config"
     )
