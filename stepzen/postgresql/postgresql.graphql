@@ -82,6 +82,17 @@ type Query {
       configuration: "postgresql_config"
     )
 
+    getSubredditListLimit(limit: Int!): [Subreddit]
+    @dbquery(
+      type: "postgresql"
+      query: """
+      select * from "subreddit"
+      order by "created_at" desc
+      limit $1      
+      """
+      configuration: "postgresql_config"
+    )
+
   """
   This query is an example of how to simply paginate your responses.
   """
@@ -125,7 +136,8 @@ type Query {
       type: "postgresql"
       schema: "public"
       query: """
-      select * from "post"
+      select *, "post"."id" as id from "post"
+      join "subreddit" on "subreddit"."id" = "post"."subreddit_id"
       order by "post"."created_at" desc
       """
       configuration: "postgresql_config"
@@ -205,6 +217,22 @@ type Mutation {
       type: "postgresql"
       # schema: "public"
       table: "subreddit"
+      dml: INSERT
+      configuration: "postgresql_config"
+    )
+
+  insertVote(post_id: ID!, username: String!, upvote: Boolean!): Vote
+    @dbquery(
+      type: "postgresql"
+      table: "vote"
+      dml: INSERT
+      configuration: "postgresql_config"
+    )
+
+  insertComment(post_id: ID!, username: String!, text: String!): Comment
+    @dbquery(
+      type: "postgresql"
+      table: "comment"
       dml: INSERT
       configuration: "postgresql_config"
     )
