@@ -1,34 +1,41 @@
-type Comments = {
-    created_at: string
-    id: number
-    post_id: number
-    text: string
-    username: string
-}
+export type FormData = {
+  postTitle: string;
+  postBody: string;
+  postImage: string;
+  subreddit: string;
+};
 
-type Vote = {
-    created_at: string
-    id: number
-    post_id: number
-    upvote: boolean
-    username: string
-}
+export type Post = {
+  body: string;
+  created_at: string;
+  id: number;
+  image: string;
+  subreddit_id: string;
+  title: string;
+  username: string;
+  subreddit: Subreddit[];
+  comments: Comment[];
+  votes: Vote[];
+};
 
-type Subreddit = {
-    created_at: string
-    id: number
-    topic: string
-}
+export type Subreddit = {
+  created_at: string;
+  topic: string;
+  id: number;
+};
 
-type Post = {
-    body: string
-    created_at: string
-    id: number
-    image: string
-    subreddit_id: number
-    title: string
-    username: string
-    votes: Vote[]
-    comments: Comment[]
-    subreddit: Subreddit[]
-}
+export type Comment = {
+  created_at: string;
+  id: number;
+  post_id: number;
+  text: string;
+  username: string;
+};
+
+export type Vote = {
+  created_at: string;
+  id: number;
+  post_id: number;
+  upvote: boolean;
+  username: string;
+};

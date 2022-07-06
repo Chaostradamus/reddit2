@@ -418,6 +418,11 @@ graphql@^16.5.0:
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-16.5.0.tgz#41b5c1182eaac7f3d47164fb247f61e4dfb69c85"
   integrity sha512-qbHgh8Ix+j/qY+a/ZcJnFQ+j8ezakqPiHwPiZhV/3PgGlgf96QMBB5/f2rkiC9sgLoy/xvT6TSiaf2nTHJh5iA==
 
+gsap@^3.10.4:
+  version "3.10.4"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.10.4.tgz#db89a6b8f6d5cb76e274eae822cbc1aa4d31e88f"
+  integrity sha512-6QatdkKxXCMfvCW4rM++0RqyLQAzFX5nwl3yHS0XPgkZBkiSEY3VZVbMltrdtsbER/xZonLtyHt684wRp4erlQ==
+
 has@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/has/-/has-1.0.3.tgz#722d7cbfc1f6aa8241f16dd814e011e1f41e8796"
@@ -705,6 +710,16 @@ preact@^10.6.3:
   resolved "https://registry.yarnpkg.com/preact/-/preact-10.8.2.tgz#b8a614f5cc8ab0cd9e63337a3d60dc80410f4ed4"
   integrity sha512-AKGt0BsDSiAYzVS78jZ9qRwuorY2CoSZtf1iOC6gLb/3QyZt+fLT09aYJBjRc/BEcRc4j+j3ggERMdNE43i1LQ==
 
+prettier-plugin-tailwindcss@^0.1.11:
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.1.11.tgz#6112da68d9d022b7f896d35c070464931c99c35f"
+  integrity sha512-a28+1jvpIZQdZ/W97wOXb6VqI762MKE/TxMMuibMEHhyYsSxQA8Ek30KObd5kJI2HF1ldtSYprFayXJXi3pz8Q==
+
+prettier@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.7.1.tgz#e235806850d057f97bb08368a4f7d899f7760c64"
+  integrity sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==
+
 pretty-format@^3.8.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-3.8.0.tgz#bfbed56d5e9a776645f4b1ff7aa1a3ac4fa3c385"
@@ -748,6 +763,11 @@ react-hot-toast@^2.2.0:
   integrity sha512-248rXw13uhf/6TNDVzagX+y7R8J183rp7MwUMNkcrBRyHj/jWOggfXTGlM8zAOuh701WyVW+eUaWG2LeSufX9g==
   dependencies:
     goober "^2.1.1"
+
+react-icons@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.4.0.tgz#a13a8a20c254854e1ec9aecef28a95cdf24ef703"
+  integrity sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg==
 
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
