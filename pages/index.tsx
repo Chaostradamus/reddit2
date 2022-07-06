@@ -20,7 +20,7 @@ const Home: NextPage = () => {
   return (
     <div className="my-7 mx-auto max-w-5xl p-8 pt-0">
       <Head>
-        <title>Reddit 2.0 (Clone)</title>
+        <title>Reddit Duece</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
